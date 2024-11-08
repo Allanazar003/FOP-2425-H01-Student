@@ -37,5 +37,53 @@ public class Pacman extends Robot implements Controllable, TickBased {
     @StudentImplementationRequired("H1.1")
     public void handleKeyInput(int k) {
         org.tudalgo.algoutils.student.Student.crash("H1.1 - Remove if implemented");
+        switch (k)
+        {
+            case 0:
+                while(!super.isFacingUp())
+                {
+                    super.turnLeft();
+                 }
+                if (super.isFrontClear())
+                {
+                    super.move();
+                    super.pickCoin();
+                }
+                break;
+            case 1:
+                 while(!super.isFacingRight())
+                {
+                    super.turnLeft();
+                 }
+                 if (super.isFrontClear())
+                {
+                    super.move();
+                    super.pickCoin();
+                }
+                break;
+            case 2:
+                    while(!super.isFacingDown())
+                {
+                    super.turnLeft();
+                 }
+                 if (super.isFrontClear())
+                {
+                    super.move();
+                    super.pickCoin();
+                }
+                break;
+            case 3:
+                    while(!super.isFacingLeft())
+                {
+                    super.turnLeft();
+                 }
+                 if (super.isFrontClear())
+                {
+                    super.move();
+                    super.pickCoin();
+                }
+                default:
+                break;
+        }
     }
 }
